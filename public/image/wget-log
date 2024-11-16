@@ -1,0 +1,11 @@
+--2024-11-16 18:53:51--  https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQC1DxpnKSR_ZK-lEZBO9pNSGc6wevFGMajJw
+Resolving encrypted-tbn0.gstatic.com (encrypted-tbn0.gstatic.com)... 142.251.12.101, 142.251.12.138, 142.251.12.102, ...
+Connecting to encrypted-tbn0.gstatic.com (encrypted-tbn0.gstatic.com)|142.251.12.101|:443... connected.
+HTTP request sent, awaiting response... 200 OK
+Length: 1777 (1.7K) [image/png]
+Saving to: ‘images?q=tbn:ANd9GcQC1DxpnKSR_ZK-lEZBO9pNSGc6wevFGMajJw’
+
+              images?q=tbn:   0%[                                            ]       0  --.-KB/s               images?q=tbn:ANd9GcQC1DxpnK 100%[===========================================>]   1.74K  --.-KB/s    in 0s      
+
+2024-11-16 18:53:51 (24.2 MB/s) - ‘images?q=tbn:ANd9GcQC1DxpnKSR_ZK-lEZBO9pNSGc6wevFGMajJw’ saved [1777/1777]
+
