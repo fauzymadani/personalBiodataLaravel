@@ -1,3 +1,27 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.custom-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    font-size: 16px;
+    text-align: left;
+    color: #fff; /* Text color */
+    background-color: #1c1c1c; /* Dark background */
+}
+
+.custom-table th,
+.custom-table td {
+    border: 1px solid #333; /* Border color */
+    padding: 10px 15px;
+}
+
+.custom-table th {
+    font-weight: bold;
+}
+
+.custom-table tbody tr:nth-child(even) {
+    background-color: #2a2a2a; /* Alternating row color */
+}
