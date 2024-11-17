@@ -91,7 +91,7 @@
         footer {
         font-family: 'JetBrains Mono Nerd Font', monospace;
         font-size: 0.8rem;
-        color: #aaa;
+        color: whitesmoke;
         background-color: #2e2e2e;
         padding: 0px;
         text-align: center;
@@ -255,7 +255,85 @@
             .map {
                 height: 200px;
             }
+
+            .debian {
+                height: 50%;
+            }
         }
+        @media (max-width: 600px) {
+            .debian {
+                width: 100%;
+            }
+        }
+
+
+        .map {
+            width: 100%;
+            max-width: 600px;
+            height: auto;
+            margin: 0 auto;
+            display: block;
+        }
+
+
+        .portfolio-container {
+            padding: 20px;
+            margin: 0 auto;
+            width: 100%;
+            max-width: 900px;
+        }
+
+
+        .portfolio-container table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .portfolio-container th, .portfolio-container td {
+            border: 1px solid #ccc;
+            padding: 8px;
+            text-align: left;
+        }
+
+        .portfolio-container th {
+            background-color: black;
+        }
+
+
+        @media (max-width: 768px) {
+
+            .map {
+                max-width: 100%;
+                height: auto;
+            }
+
+
+            .portfolio-container table {
+                width: 100%;
+            }
+
+            .portfolio-container td, .portfolio-container th {
+                display: block;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .portfolio-container th {
+                text-align: right;
+                padding-right: 20px;
+            }
+
+            .portfolio-container td {
+                text-align: left;
+                padding-left: 20px;
+                border-top: 1px solid #ddd;
+            }
+
+            .portfolio-container th, .portfolio-container td {
+                padding: 10px;
+            }
+        }
+
     </style>
     <link rel="stylesheet" href="{{ asset('css/app.css') }}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.css">
@@ -306,9 +384,10 @@
         <h2>## Synopsis</h2>
         <p>It's all started when i'm using windows 10, my laptop is a low end specs laptop. and i like coding since in the middle schools.
             one day, i'm bored and just watching a youtube video about why you should move from windows to Linux. and that is inspiring me to switch to linux.
-            my first command in linux was <pre>sudo apt update</pre> i love Debian so much than the ohers distro's.</p>
-        <h2>my first C project</h2>
-        <pre><code class="language-c">
+            my first command in linux was <pre>sudo apt update</pre> i love Debian so much than the ohers distro's.<br>
+                now, i'm currently learning C, Laravel, C#, and php. when i'm creating my first C program, i was very exited to see the result of my work.</p>
+            <h2>my first C project</h2>
+            <pre><code class="language-c">
 // Author: Fauzy Madani
 // https://github.com/fauzymadani
 
@@ -392,9 +471,9 @@ int main() {
                         <td>Writing</td>
                     </tr>
                     <tr>
-                        <td>Zsh</td>
+                        <td>Bash</td>
                         <td>Shell</td>
-                        <td>Terminal Customization</td>
+                        <td>Simple shell, yet still powerfull</td>
                     </tr>
                 </tbody>
             </table>
@@ -494,6 +573,9 @@ i use zed, nano, vim, and the other IDE</span>
                 <li>*.js</li>
             </ul>
         </div>
+        <p>C is my favourite programming language. it's a simple language, yet powerfull. i'm using it to create my first program, and i'm very happy with the result. and i'm also using it to create my second program, and i'm very happy with the result.</p>
+        <h3>## The synopsis of C</h3><br>
+        <p>C (pronounced /ˈsiː/ – like the letter c)[6] is a general-purpose programming language. It was created in the 1970s by Dennis Ritchie and remains very widely used and influential. By design, C's features cleanly reflect the capabilities of the targeted CPUs. It has found lasting use in operating systems code (especially in kernels[7]), device drivers, and protocol stacks, but its use in application software has been decreasing.[8] C is commonly used on computer architectures that range from the largest supercomputers to the smallest microcontrollers and embedded systems.</p>
         <hr>
         <h2>## Why Using Linux? ## </h2>
         <div class="debian">
@@ -518,7 +600,7 @@ i use zed, nano, vim, and the other IDE</span>
         @else
             <p class="error-message">The Data Is Not Available, Try Again Later..</p>
         @endif
-        <footer><p>Manual page Fauzy(1) (press h for help)</p></footer>
+        <footer><p>Manual page Fauzy(1) (press h for help). &copy; 2024 Fauzy. All Rights Reserved. <a href="{{ route('license') }}" style="color: cyan;">License GPL-3.0</a></p></footer>
     </div>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/styles/atom-one-dark.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.9.0/highlight.min.js"></script>
@@ -527,7 +609,22 @@ i use zed, nano, vim, and the other IDE</span>
             hljs.highlightAll();
         });
     </script>
-    <link rel="stylesheet" href="{{ asset('css/dracula.css') }}">
+    <script>
+        document.addEventListener("keydown", function(event) {
+            const key = event.key.toLowerCase();
+
+            if (key === "h") {
+                window.location.href = "{{ route('help') }}";
+            } else if (key === "a") {
+                window.scrollTo({ top: 0, behavior: "smooth" });
+            } else if (key === "b") {
+                window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+            }
+
+        });
+    </script>
+
+
 
 </body>
 </html>
