@@ -27,6 +27,9 @@ class PortfolioSeeder extends Seeder
             "favourite_terminal_text_editor" => "neovim__vim",
             "favourite_terminal_text_editor2" => "nano",
             "favourite_text_editor3" => "zed",
+            "shell" => "/bin/bash 5.2.15",
+            "package_manager" =>
+                "4597 (dpkg), 27 (brew), 23 (flatpak), 20 (snap) ",
         ]);
     }
 }

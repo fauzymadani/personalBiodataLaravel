@@ -90,7 +90,7 @@
 
         footer {
         font-family: 'JetBrains Mono Nerd Font', monospace;
-        font-size: 0.8rem;
+        font-size: 0.5rem;
         color: whitesmoke;
         background-color: #2e2e2e;
         padding: 0px;
@@ -353,6 +353,8 @@
             <h2>## Daily operating system</h2>
             <p><strong>OS:</strong> {{ $portfolio->os }}</p>
             <p><strong>Window Manager:</strong> {{ $portfolio->wm }}</p>
+            <p><strong>Shell: </strong> {{$portfolio->shell}}</p>
+            <p><strong>Package Manager: </strong> {{$portfolio->package_manager}}</p>
             <hr>
             <h2>## Text editor</h2>
             <p><strong>Favourite text editor(GUI):</strong> {{$portfolio->favourite_text_editor}}</p>
@@ -385,7 +387,19 @@
         <p>It's all started when i'm using windows 10, my laptop is a low end specs laptop. and i like coding since in the middle schools.
             one day, i'm bored and just watching a youtube video about why you should move from windows to Linux. and that is inspiring me to switch to linux.
             my first command in linux was <pre>sudo apt update</pre> i love Debian so much than the ohers distro's.<br>
-                now, i'm currently learning C, Laravel, C#, and php. when i'm creating my first C program, i was very exited to see the result of my work.</p>
+                now, i'm currently learning C, Laravel, C#, and php. when i'm creating my first C program, i was very exited to see the result of my work.</p><br>
+            <p>Born and raised in a quaint small city,
+                I have always been driven by an insatiable curiosity and a passion for technology.
+                My journey into the world of web development began at a young age, when I first discovered the power of coding and its ability to bring ideas to life. This fascination quickly evolved into a full-fledged career as I honed my skills and sought to create engaging,
+                user-friendly digital experiences that resonate with audiences.</p><br>
+            <p>As a web developer, I thrive in the dynamic and ever-evolving tech landscape.
+                My love for Linux has played a significant role in shaping my approach to development
+                , allowing me to explore the open-source community and embrace its collaborative spirit.
+                I'm passionate about the philosophy behind open source, believing that sharing knowledge
+                and resources fuels innovation and creativity. This dedication to open-source principles not
+                only informs my work but also inspires me to contribute back to the community whenever
+                possible.</p><br>
+            <p>Characterized by my hyperactive approach to coding and problem-solving, I find joy in tackling challenges head-on, often taking the road less traveled to uncover unique solutions. I believe that the best ideas often emerge when we step outside our comfort zones, and I constantly seek opportunities to push my boundaries. Whether it's developing a cutting-edge web application or participating in hackathons, my enthusiasm for web development shines through in every project I undertake. As I continue to grow in this field, I am excited about the future of technology and committed to leveraging my skills to make a positive impact in the digital world.</p>
             <h2>my first C project</h2>
             <pre><code class="language-c">
 // Author: Fauzy Madani
@@ -587,6 +601,31 @@ i use zed, nano, vim, and the other IDE</span>
             configuring linux, customizing it, trying window manager, text editor, looking for inspiration for linux themes.
             and since i don't have any girlfriend, my time is fully on linux and programming. (i have interest on unix and freebsd too)</p>
         <hr>
+        <h2>## The text editor I use On Linux</h2>
+
+        @php
+            $editors = \App\Models\TextEditor::all();
+        @endphp
+        <table border="1" cellspacing="0" cellpadding="2">
+                <thead>
+                    <tr>
+                        <th>Name</th>
+                        <th>Type</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach ($editors as $editor)
+                        <tr>
+                            <td>{{ $editor->name }}</td>
+                            <td>{{ $editor->type }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
+            <h2>## Why Use such a text editor?? ##</h2>
+            <p>the fun thing about the editor is also configuring them the way you want, i love customizing things the way
+                i want.</p>
+        <hr>
         <h2>## What people say!!</h2>
         <script src="https://utteranc.es/client.js"
                 repo="fauzymadani/personalBiodataLaravel"
@@ -619,6 +658,12 @@ i use zed, nano, vim, and the other IDE</span>
                 window.scrollTo({ top: 0, behavior: "smooth" });
             } else if (key === "b") {
                 window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+            } else if (key === "j") {
+                window.scrollBy({ top: -100, behavior: "smooth" });
+            } else if (key === "k") {
+                window.scrollBy({ top: 100, behavior: "smooth" })
+            } else if (key === "p") {
+                window.location.href = "{{ route('key') }}";
             }
 
         });

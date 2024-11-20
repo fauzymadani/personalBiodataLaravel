@@ -135,9 +135,11 @@
                     font-size: 1.5rem;
                 }
 
-                pre {
+                pre,
+                code {
                     font-size: 0.9rem;
                     padding: 0.8rem;
+                    color: white;
                 }
 
                 .keybinding-table {
@@ -188,14 +190,15 @@
             }
 </style>
 <pre>
-                            GNU GENERAL PUBLIC LICENSE
-                            Version 3, 29 June 2007
+    <code>
+        GNU GENERAL PUBLIC LICENSE
+           Version 3, 29 June 2007
 
 Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
 Everyone is permitted to copy and distribute verbatim copies
 of this license document, but changing it is not allowed.
 
-            Preamble
+                Preamble
 
 The GNU General Public License is a free, copyleft license for
 software and other kinds of works.
@@ -258,7 +261,7 @@ patents cannot be used to render the program non-free.
 The precise terms and conditions for copying, distribution and
 modification follow.
 
-       TERMS AND CONDITIONS
+           TERMS AND CONDITIONS
 
 0. Definitions.
 
@@ -808,7 +811,7 @@ an absolute waiver of all civil liability in connection with the
 Program, unless a warranty or assumption of liability accompanies a
 copy of the Program in return for a fee.
 
-     END OF TERMS AND CONDITIONS
+         END OF TERMS AND CONDITIONS
 
 How to Apply These Terms to Your New Programs
 
@@ -862,8 +865,10 @@ may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
 <https://www.gnu.org/licenses/why-not-lgpl.html>.
-
+    <footer><p>Manual page Fauzy(1) (press h for help, q for go back). &copy; 2024 Fauzy. All Rights Reserved. <a href="{{ route('license') }}" style="color: cyan;">License GPL-3.0</a></p></footer>
+    </code>
 </pre>
+
 <script>
     document.addEventListener("keydown", function(event) {
         const key = event.key.toLowerCase();

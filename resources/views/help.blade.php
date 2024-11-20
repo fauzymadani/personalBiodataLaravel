@@ -224,6 +224,18 @@
                     <td>Go to the index page</td>
                     <td><pre>q</pre></td>
                 </tr>
+                <tr>
+                    <td>scroll up</td>
+                    <td><pre>j</pre></td>
+                </tr>
+                <tr>
+                    <td>scroll down</td>
+                    <td><pre>k</pre></td>
+                </tr>
+                <tr>
+                    <td>display my pgp key</td>
+                    <td><pre>p</pre></td>
+                </tr>
             </tbody>
         </table>
 
@@ -273,6 +285,12 @@
                 window.scrollTo({ top: 0, behavior: "smooth" });
             } else if (key === "b") {
                 window.scrollTo({ top: document.body.scrollHeight, behavior: "smooth" });
+            } else if (key === "j") {
+                window.scrollBy({ top: -100, behavior: "smooth" });
+            } else if (key === "k") {
+                window.scrollBy({ top: 100, behavior: "smooth" })
+            } else if (key === "p") {
+                window.location.href = "{{ route('key') }}";
             }
 
         });

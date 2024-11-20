@@ -22,6 +22,8 @@ return new class extends Migration {
             $table->string("favourite_terminal_text_editor");
             $table->string("favourite_terminal_text_editor2");
             $table->string("favourite_text_editor3");
+            $table->string("shell");
+            $table->string("package_manager");
             $table->timestamps();
         });
     }
